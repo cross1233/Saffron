@@ -1,0 +1,20 @@
+[package]
+name = "liquidity_provider"
+version = "1.0.0"
+authors = ["liquidity_dev"]
+
+[addresses]
+# Hyperion DEX 地址（测试网）
+hyperion_dex = "0x3673bee9e7b78ae63d4a9e3d58425bc97e7f3b8d68efc846ee732b14369333dd"
+dex_contract = "0x3673bee9e7b78ae63d4a9e3d58425bc97e7f3b8d68efc846ee732b14369333dd"
+deployer = "0x3673bee9e7b78ae63d4a9e3d58425bc97e7f3b8d68efc846ee732b14369333dd"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "mainnet", subdir = "aptos-move/framework/aptos-framework" }
+AptosStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "mainnet", subdir = "aptos-move/framework/aptos-stdlib" }
+MoveStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "mainnet", subdir = "aptos-move/framework/move-stdlib" }
+
+# Hyperion DEX 依赖 (本地路径)
+dex = { local = "../hyperion-interface" }
+
+[dev-dependencies]
